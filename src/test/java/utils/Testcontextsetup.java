@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
 
+import pageObjects.logInpage;
 import pageObjects.pageobjectManager;
 
 public class Testcontextsetup {
@@ -11,11 +12,15 @@ public class Testcontextsetup {
 	
 	public WebDriver driver;
 	
-	public String loginpage;
+	public logInpage Loginpage;
 	
 	public pageobjectManager pageobjectmanager;
 	
 	public TestBase testbase;
+	
+	public Genericutils genericutils;
+	
+	
 	
 	
 	
@@ -25,6 +30,8 @@ public class Testcontextsetup {
 		testbase= new TestBase();
 		
 		pageobjectmanager = new pageobjectManager(testbase.WebDriverManger());
+		
+		genericutils = new Genericutils(testbase.WebDriverManger());
 		
 	}
 	
