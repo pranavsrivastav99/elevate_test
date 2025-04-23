@@ -1,15 +1,19 @@
 package pageObjects;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
+import utils.Testcontextsetup;
+
 public class logInpage {
 
 	public WebDriver driver;
+	
+	public Testcontextsetup testcontextsetup;
+	
 
 	@FindBy(xpath = "//button[@type='submit']")
 	WebElement buttonClick;
@@ -28,11 +32,11 @@ public class logInpage {
 
 	@FindBy(xpath="//button[@type='submit']")
 	WebElement signInbutton;
-	
+
 	@FindBy(name="email")
 	WebElement emailinputField;
-	
-	
+
+
 
 	public logInpage(WebDriver driver) {
 
@@ -43,8 +47,8 @@ public class logInpage {
 	}
 
 	public void abletoSeesignInbutton() {
-		
-		
+
+
 		Assert.assertTrue(signInbutton.isDisplayed());
 
 	}
@@ -52,7 +56,7 @@ public class logInpage {
 	public void eyeIconclick() throws InterruptedException {
 
 		eyeIcon.click();
-		
+
 //		Thread.sleep(4000);
 	}
 
@@ -88,13 +92,26 @@ public class logInpage {
 		emailinputField.sendKeys(string);
 
 	}
-	
+
 	public void passwordinputfield(String string) {
-		
-		
+
+
 		passwordField.sendKeys(string);
-		
+
 
 	}
 	
+public void closeandReopenbrowser() {
+	
+	driver.quit();
+	
+	testcontextsetup.driver.get("https://elevateqa.vercel.app/");
+	
+	testcontextsetup.driver.getCurrentUrl();
+	
+	
+	
+	
+}
+
 }

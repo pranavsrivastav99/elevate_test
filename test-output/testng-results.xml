@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-17T16:18:08 IST" name="Default suite" finished-at="2025-04-17T16:18:15 IST" duration-ms="6877">
+  <suite started-at="2025-04-23T08:00:49 IST" name="Default suite" finished-at="2025-04-23T08:01:08 IST" duration-ms="19042">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberOptions.TestNGtestRunner@1807e3f6]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberOptions.TestNGtestRunner@4d14b6c2]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-04-17T16:18:08 IST" name="Default test" finished-at="2025-04-17T16:18:15 IST" duration-ms="6877">
+    <test started-at="2025-04-23T08:00:49 IST" name="Default test" finished-at="2025-04-23T08:01:08 IST" duration-ms="19042">
       <class name="cucumberOptions.TestNGtestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:cucumberOptions.TestNGtestRunner@1807e3f6]" started-at="2025-04-17T16:18:08 IST" name="setUpClass" finished-at="2025-04-17T16:18:09 IST" duration-ms="310" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:cucumberOptions.TestNGtestRunner@4d14b6c2]" started-at="2025-04-23T08:00:49 IST" name="setUpClass" finished-at="2025-04-23T08:00:50 IST" duration-ms="1056" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@1907874b]]>
+                <![CDATA[org.testng.TestRunner@4981d95b]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberOptions.TestNGtestRunner@1807e3f6]" started-at="2025-04-17T16:18:09 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-04-17T16:18:15 IST" duration-ms="6501" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberOptions.TestNGtestRunner@4d14b6c2]" started-at="2025-04-23T08:00:50 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-04-23T08:01:07 IST" duration-ms="17434" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Login with invalid credentials"]]>
+                <![CDATA["Remember Me functionality retains login session after browser restart"]]>
               </value>
             </param>
             <param index="1">
@@ -34,10 +34,22 @@
               </value>
             </param>
           </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot read field "driver" because "this.testcontextsetup" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot read field "driver" because "this.testcontextsetup" is null
+at pageObjects.logInpage.closeandReopenbrowser(logInpage.java:108)
+at stepDefinations.Loginpage.i_close_and_reopen_the_browser(Loginpage.java:225)
+at ✽.I close and reopen the browser(file:///C:/Users/Pranav/eclipse-workspace/elevatecucumber/src/test/java/features/login.feature:51)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:cucumberOptions.TestNGtestRunner@1807e3f6]" started-at="2025-04-17T16:18:15 IST" name="tearDownClass" finished-at="2025-04-17T16:18:15 IST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:cucumberOptions.TestNGtestRunner@4d14b6c2]" started-at="2025-04-23T08:01:07 IST" name="tearDownClass" finished-at="2025-04-23T08:01:08 IST" duration-ms="501" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

@@ -1,29 +1,15 @@
 package stepDefinations;
 
-import static org.testng.Assert.assertEquals;
-
-import java.util.List;
-import java.util.Map;
-import java.util.NoSuchElementException;
-
 import org.openqa.selenium.By;
-
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import io.cucumber.datatable.DataTable;
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.cucumber.messages.types.Duration;
-import lombok.var;
-import pageObjects.pageobjectManager;
 import pageObjects.logInpage;
+import pageObjects.pageobjectManager;
 import utils.Genericutils;
 import utils.Testcontextsetup;
 
@@ -133,7 +119,7 @@ public class Loginpage {
 
 	@When("I enter a valid password {string}")
 	public void i_enter_a_valid_password(String password) {
-		
+
 		loginpage.passwordinputfield(password);
 	}
 
@@ -141,17 +127,17 @@ public class Loginpage {
 	public void i_click_on_the_button(String buttonText) throws InterruptedException {
 
 		loginpage.loginButton(buttonText);
-		
+
 //		Thread.sleep(3000);
 	}
 
 	@Then("I should be redirected to the dashboard")
 	public void i_should_be_redirected_to_the_dashboard() {
-		
-		
+
+
 		testcontextsetup.genericutils.compareToUrl("https://elevateqa.vercel.app/organization");
-	
-		
+
+
 	}
 
 	@When("I enter an invalid email {string}")
@@ -161,15 +147,15 @@ public class Loginpage {
 
 	@When("I enter an invalid password {string}")
 	public void i_enter_an_invalid_password(String password) {
-		
+
 		loginpage.passwordinputfield(password);
 	}
 
 	@Then("I should see an error message {string}")
 	public void i_should_see_an_error_message(String expectedMessage) {
-		
+
 		testcontextsetup.genericutils.verifythetoastMessage(expectedMessage);
-		
+
 	}
 
 	@When("I leave the email field empty")
@@ -186,11 +172,11 @@ public class Loginpage {
 
 	@When("I check the {string} checkbox")
 	public void i_check_the_checkbox(String checkboxLabel) {
-		WebElement checkbox = testcontextsetup.driver.findElement(By.id("remember-me"));
-		if (!checkbox.isSelected()) {
-			checkbox.click();
+		
+		testcontextsetup.genericutils.checkBoxcheck(checkboxLabel);
+		
 		}
-	}
+	
 
 	@Then("my login session should be remembered")
 	public void my_login_session_should_be_remembered() {
@@ -224,6 +210,29 @@ public class Loginpage {
 	public void i_click_on_the_eye_icon_again(String icon) {
 
 		loginpage.passwordEyeIconclick();
+	}
+	
+	@Then("I should be logged in successfully")
+	public void i_should_be_logged_in_successfully() {
+	    // Write code here that turns the phrase above into concrete actions
+		testcontextsetup.genericutils.compareToUrl("https://elevateqa.vercel.app/organization");
+		
+		
+	}
+	@When("I close and reopen the browser")
+	public void i_close_and_reopen_the_browser() {
+	    // Write code here that turns the phrase above into concrete actions
+		loginpage.closeandReopenbrowser();
+	}
+	@When("I navigate to the DL6 Technologies home page")
+	public void i_navigate_to_the_dl6_technologies_home_page() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+	@Then("I should still be logged in")
+	public void i_should_still_be_logged_in() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
 	}
 
 }

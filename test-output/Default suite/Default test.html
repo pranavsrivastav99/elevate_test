@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Apr 17 16:18:08 IST 2025</td>
+<td>Started on:</td><td>Wed Apr 23 08:00:49 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>6 seconds (6877 ms)</td>
+<tr><td>Total time:</td><td>19 seconds (19042 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -76,10 +76,19 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='cucumberOptions.TestNGtestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumberOptions.TestNGtestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login with invalid credentials", "Login Functionality"</td>
-<td></td>
-<td>6</td>
-<td>cucumberOptions.TestNGtestRunner@1807e3f6</td></tr>
+<td title='cucumberOptions.TestNGtestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumberOptions.TestNGtestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Remember Me functionality retains login session after browser restart", "Login Functionality"</td>
+<td><div><pre>java.lang.NullPointerException: Cannot read field &quot;driver&quot; because &quot;this.testcontextsetup&quot; is null
+	at pageObjects.logInpage.closeandReopenbrowser(logInpage.java:108)
+	at stepDefinations.Loginpage.i_close_and_reopen_the_browser(Loginpage.java:225)
+	at ✽.I close and reopen the browser(file:///C:/Users/Pranav/eclipse-workspace/elevatecucumber/src/test/java/features/login.feature:51)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2102232441", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2102232441'><pre>java.lang.NullPointerException: Cannot read field &quot;driver&quot; because &quot;this.testcontextsetup&quot; is null
+	at pageObjects.logInpage.closeandReopenbrowser(logInpage.java:108)
+	at stepDefinations.Loginpage.i_close_and_reopen_the_browser(Loginpage.java:225)
+	at ✽.I close and reopen the browser(file:///C:/Users/Pranav/eclipse-workspace/elevatecucumber/src/test/java/features/login.feature:51)
+</pre></div></td>
+<td>17</td>
+<td>cucumberOptions.TestNGtestRunner@4d14b6c2</td></tr>
 </table><p>
 </body>
 </html>
