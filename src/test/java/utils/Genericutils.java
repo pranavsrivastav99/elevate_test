@@ -133,6 +133,10 @@ public void checkBoxcheck(String checkboxLabel) {
 	
 	
 }
+public void navigateToUrl(String url) {
+    driver.get(url);
+}
+
 
 
 public void verifythetoastMessage(String string) {

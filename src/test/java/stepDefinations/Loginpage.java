@@ -227,12 +227,18 @@ public class Loginpage {
 	@When("I navigate to the DL6 Technologies home page")
 	public void i_navigate_to_the_dl6_technologies_home_page() {
 	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		testcontextsetup.genericutils.navigateToUrl("https://elevateqa.vercel.app");
+	    
+	   
 	}
 	@Then("I should still be logged in")
 	public void i_should_still_be_logged_in() {
 	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		 String expectedUrlPart = "https://elevateqa.vercel.app/organization";
+		    String actualUrl = testcontextsetup.genericutils.currentpageurl();
+
+		    Assert.assertTrue(actualUrl.contains(expectedUrlPart),
+		        "Assertion failed: Current URL does not contain the expected value. Actual: " + actualUrl);
 	}
 
 }
