@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-23T08:00:49 IST" name="Default suite" finished-at="2025-04-23T08:01:08 IST" duration-ms="19042">
+  <suite started-at="2025-05-10T17:55:18 IST" name="Default suite" finished-at="2025-05-10T17:55:30 IST" duration-ms="11666">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberOptions.TestNGtestRunner@4d14b6c2]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberOptions.TestNGtestRunner@7e990ed7]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-04-23T08:00:49 IST" name="Default test" finished-at="2025-04-23T08:01:08 IST" duration-ms="19042">
+    <test started-at="2025-05-10T17:55:18 IST" name="Default test" finished-at="2025-05-10T17:55:30 IST" duration-ms="11666">
       <class name="cucumberOptions.TestNGtestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:cucumberOptions.TestNGtestRunner@4d14b6c2]" started-at="2025-04-23T08:00:49 IST" name="setUpClass" finished-at="2025-04-23T08:00:50 IST" duration-ms="1056" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:cucumberOptions.TestNGtestRunner@7e990ed7]" started-at="2025-05-10T17:55:18 IST" name="setUpClass" finished-at="2025-05-10T17:55:19 IST" duration-ms="926" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@4981d95b]]>
+                <![CDATA[org.testng.TestRunner@2fba0dac]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberOptions.TestNGtestRunner@4d14b6c2]" started-at="2025-04-23T08:00:50 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-04-23T08:01:07 IST" duration-ms="17434" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberOptions.TestNGtestRunner@7e990ed7]" started-at="2025-05-10T17:55:19 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-05-10T17:55:23 IST" duration-ms="3405" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Remember Me functionality retains login session after browser restart"]]>
+                <![CDATA["Verify UI elements on the login page"]]>
               </value>
             </param>
             <param index="1">
@@ -34,22 +34,73 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot read field "driver" because "this.testcontextsetup" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot read field "driver" because "this.testcontextsetup" is null
-at pageObjects.logInpage.closeandReopenbrowser(logInpage.java:108)
-at stepDefinations.Loginpage.i_close_and_reopen_the_browser(Loginpage.java:225)
-at ✽.I close and reopen the browser(file:///C:/Users/Pranav/eclipse-workspace/elevatecucumber/src/test/java/features/login.feature:51)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:cucumberOptions.TestNGtestRunner@4d14b6c2]" started-at="2025-04-23T08:01:07 IST" name="tearDownClass" finished-at="2025-04-23T08:01:08 IST" duration-ms="501" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberOptions.TestNGtestRunner@7e990ed7]" started-at="2025-05-10T17:55:23 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-05-10T17:55:25 IST" duration-ms="2283" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify eye icon functionality in the password field"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberOptions.TestNGtestRunner@7e990ed7]" started-at="2025-05-10T17:55:25 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-05-10T17:55:27 IST" duration-ms="2173" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successful login with valid credentials"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Assertion failed: Current URL does not contain the expected value. expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Assertion failed: Current URL does not contain the expected value. expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at utils.Genericutils.compareToUrl(Genericutils.java:58)
+at stepDefinations.Loginpage.i_should_be_redirected_to_the_dashboard(Loginpage.java:138)
+at ✽.I should be redirected to the dashboard(file:///C:/Users/Pranav/eclipse-workspace/elevatecucumber/src/test/java/features/login.feature:32)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberOptions.TestNGtestRunner@7e990ed7]" started-at="2025-05-10T17:55:27 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-05-10T17:55:30 IST" duration-ms="2521" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login with invalid credentials"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:cucumberOptions.TestNGtestRunner@7e990ed7]" started-at="2025-05-10T17:55:30 IST" name="tearDownClass" finished-at="2025-05-10T17:55:30 IST" duration-ms="310" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

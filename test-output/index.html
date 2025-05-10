@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Pranav\AppData\Local\Temp\testng-eclipse--1504230932\testng-customsuite.xml</span>
+                    <span>C:\Users\Pranav\AppData\Local\Temp\testng-eclipse-1335508300\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">4 methods, 1 failed,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -103,10 +103,34 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="cucumberOptions.TestNGtestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Remember Me functionality retains login session after browser restart&quot;, &quot;Login Functionality&quot;)">runScenario("Remember Me functionality retains login session after browser restart", "Login Functionality")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="cucumberOptions.TestNGtestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Successful login with valid credentials&quot;, &quot;Login Functionality&quot;)">runScenario("Successful login with valid credentials", "Login Functionality")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Default_suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="cucumberOptions.TestNGtestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Login with invalid credentials&quot;, &quot;Login Functionality&quot;)">runScenario("Login with invalid credentials", "Login Functionality")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="cucumberOptions.TestNGtestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify eye icon functionality in the password field&quot;, &quot;Login Functionality&quot;)">runScenario("Verify eye icon functionality in the password field", "Login Functionality")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="cucumberOptions.TestNGtestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify UI elements on the login page&quot;, &quot;Login Functionality&quot;)">runScenario("Verify UI elements on the login page", "Login Functionality")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -126,14 +150,17 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Remember Me functionality retains login session after browser restart&quot;, &quot;Login Functionality&quot;)">
-                  </a> <!-- runScenario("Remember Me functionality retains login session after browser restart", "Login Functionality") -->
+                  <a name="runScenario(&quot;Successful login with valid credentials&quot;, &quot;Login Functionality&quot;)">
+                  </a> <!-- runScenario("Successful login with valid credentials", "Login Functionality") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Remember Me functionality retains login session after browser restart","Login Functionality")</span>
-                  <div class="stack-trace">java.lang.NullPointerException: Cannot read field &quot;driver&quot; because &quot;this.testcontextsetup&quot; is null
-	at pageObjects.logInpage.closeandReopenbrowser(logInpage.java:108)
-	at stepDefinations.Loginpage.i_close_and_reopen_the_browser(Loginpage.java:225)
-	at ✽.I close and reopen the browser(file:///C:/Users/Pranav/eclipse-workspace/elevatecucumber/src/test/java/features/login.feature:51)
+                  <span class="parameters">("Successful login with valid credentials","Login Functionality")</span>
+                  <div class="stack-trace">java.lang.AssertionError: Assertion failed: Current URL does not contain the expected value. expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at utils.Genericutils.compareToUrl(Genericutils.java:58)
+	at stepDefinations.Loginpage.i_should_be_redirected_to_the_dashboard(Loginpage.java:138)
+	at ✽.I should be redirected to the dashboard(file:///C:/Users/Pranav/eclipse-workspace/elevatecucumber/src/test/java/features/login.feature:32)
 
 </div> <!-- stack-trace -->
                   <em>
@@ -142,10 +169,48 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Default_suite-class-failed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">cucumberOptions.TestNGtestRunner</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Login with invalid credentials&quot;, &quot;Login Functionality&quot;)">
+                  </a> <!-- runScenario("Login with invalid credentials", "Login Functionality") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Login with invalid credentials","Login Functionality")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify eye icon functionality in the password field&quot;, &quot;Login Functionality&quot;)">
+                  </a> <!-- runScenario("Verify eye icon functionality in the password field", "Login Functionality") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify eye icon functionality in the password field","Login Functionality")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify UI elements on the login page&quot;, &quot;Login Functionality&quot;)">
+                  </a> <!-- runScenario("Verify UI elements on the login page", "Login Functionality") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify UI elements on the login page","Login Functionality")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-passed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Pranav\AppData\Local\Temp\testng-eclipse--1504230932\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Pranav\AppData\Local\Temp\testng-eclipse-1335508300\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -202,16 +267,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'cucumberOptions.TestNGtestRunner')
-data.setCell(0, 3, 17434);
+data.setCell(0, 3, 3405);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'runScenario')
+data.setCell(1, 2, 'cucumberOptions.TestNGtestRunner')
+data.setCell(1, 3, 2521);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'runScenario')
+data.setCell(2, 2, 'cucumberOptions.TestNGtestRunner')
+data.setCell(2, 3, 2283);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'runScenario')
+data.setCell(3, 2, 'cucumberOptions.TestNGtestRunner')
+data.setCell(3, 3, 2173);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 17 seconds</span>
+              <span class="suite-total-time">Total running time: 10 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -239,18 +316,30 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">cucumberOptions.TestNGtestRunner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@4981d95b)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@2fba0dac)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+                <span class="method-name">runScenario("Verify UI elements on the login page", "Login Functionality")</span>
+                <span class="method-start">939 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Verify eye icon functionality in the password field", "Login Functionality")</span>
+                <span class="method-start">4346 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">runScenario("Remember Me functionality retains login session after browser restart", "Login Functionality")</span>
-                <span class="method-start">1069 ms</span>
+                <span class="method-name">runScenario("Successful login with valid credentials", "Login Functionality")</span>
+                <span class="method-start">6631 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Login with invalid credentials", "Login Functionality")</span>
+                <span class="method-start">8805 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">18508 ms</span>
+                <span class="method-start">11330 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

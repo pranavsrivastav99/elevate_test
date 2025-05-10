@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>3/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Apr 23 08:00:49 IST 2025</td>
+<td>Started on:</td><td>Sat May 10 17:55:18 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>19 seconds (19042 ms)</td>
+<tr><td>Total time:</td><td>11 seconds (11666 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,19 +76,49 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='cucumberOptions.TestNGtestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumberOptions.TestNGtestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Remember Me functionality retains login session after browser restart", "Login Functionality"</td>
-<td><div><pre>java.lang.NullPointerException: Cannot read field &quot;driver&quot; because &quot;this.testcontextsetup&quot; is null
-	at pageObjects.logInpage.closeandReopenbrowser(logInpage.java:108)
-	at stepDefinations.Loginpage.i_close_and_reopen_the_browser(Loginpage.java:225)
-	at ✽.I close and reopen the browser(file:///C:/Users/Pranav/eclipse-workspace/elevatecucumber/src/test/java/features/login.feature:51)
-</pre></div><a href='#' onClick='toggleBox("stack-trace2102232441", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2102232441'><pre>java.lang.NullPointerException: Cannot read field &quot;driver&quot; because &quot;this.testcontextsetup&quot; is null
-	at pageObjects.logInpage.closeandReopenbrowser(logInpage.java:108)
-	at stepDefinations.Loginpage.i_close_and_reopen_the_browser(Loginpage.java:225)
-	at ✽.I close and reopen the browser(file:///C:/Users/Pranav/eclipse-workspace/elevatecucumber/src/test/java/features/login.feature:51)
+<td title='cucumberOptions.TestNGtestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumberOptions.TestNGtestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Successful login with valid credentials", "Login Functionality"</td>
+<td><div><pre>java.lang.AssertionError: Assertion failed: Current URL does not contain the expected value. expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at utils.Genericutils.compareToUrl(Genericutils.java:58)
+	at stepDefinations.Loginpage.i_should_be_redirected_to_the_dashboard(Loginpage.java:138)
+	at ✽.I should be redirected to the dashboard(file:///C:/Users/Pranav/eclipse-workspace/elevatecucumber/src/test/java/features/login.feature:32)
+</pre></div><a href='#' onClick='toggleBox("stack-trace263565037", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace263565037'><pre>java.lang.AssertionError: Assertion failed: Current URL does not contain the expected value. expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at utils.Genericutils.compareToUrl(Genericutils.java:58)
+	at stepDefinations.Loginpage.i_should_be_redirected_to_the_dashboard(Loginpage.java:138)
+	at ✽.I should be redirected to the dashboard(file:///C:/Users/Pranav/eclipse-workspace/elevatecucumber/src/test/java/features/login.feature:32)
 </pre></div></td>
-<td>17</td>
-<td>cucumberOptions.TestNGtestRunner@4d14b6c2</td></tr>
+<td>2</td>
+<td>cucumberOptions.TestNGtestRunner@7e990ed7</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='cucumberOptions.TestNGtestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumberOptions.TestNGtestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login with invalid credentials", "Login Functionality"</td>
+<td></td>
+<td>2</td>
+<td>cucumberOptions.TestNGtestRunner@7e990ed7</td></tr>
+<tr>
+<td title='cucumberOptions.TestNGtestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumberOptions.TestNGtestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify eye icon functionality in the password field", "Login Functionality"</td>
+<td></td>
+<td>2</td>
+<td>cucumberOptions.TestNGtestRunner@7e990ed7</td></tr>
+<tr>
+<td title='cucumberOptions.TestNGtestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumberOptions.TestNGtestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify UI elements on the login page", "Login Functionality"</td>
+<td></td>
+<td>3</td>
+<td>cucumberOptions.TestNGtestRunner@7e990ed7</td></tr>
 </table><p>
 </body>
 </html>

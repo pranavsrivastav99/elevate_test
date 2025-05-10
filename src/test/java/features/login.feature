@@ -26,8 +26,8 @@ Feature: Login Functionality
  @test 
   Scenario: Successful login with valid credentials
     Given I am on the DL6 Technologies login page
-    When I enter a valid email "pranav0203@yopmail.com"
-    And I enter a valid password "Admin@123"
+    When I enter a valid email "kucopeluq@mailinator.com"
+    And I enter a valid password "Pa$$w0rd!"
     And I click on the "Sign In" button
     Then I should be redirected to the dashboard
     
