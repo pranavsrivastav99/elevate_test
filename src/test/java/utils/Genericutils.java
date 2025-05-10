@@ -6,6 +6,7 @@ import java.util.Map;
 import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
@@ -42,22 +43,30 @@ public class Genericutils {
 
 
 
-public void compareToUrl(String expected) {
+	public void compareToUrl(String expected) {
+	    try {
+	        // 1. Wait for the page to load and URL to change to something meaningful
+	        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+	        wait.until(driver -> !driver.getCurrentUrl().isEmpty());  // Wait until some URL is loaded
 
-    // 1. Wait until URL contains the expected part (or you can use urlToBe if it's full match)
-    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-    wait.until(ExpectedConditions.urlContains(expected));
+	        // 2. Get actual URL
+	        String actual = driver.getCurrentUrl();
+	        System.out.println("Actual URL: " + actual);
+	        System.out.println("Expected URL Part: " + expected);
 
-    // 2. Get the current URL
-    String actual = driver.getCurrentUrl();
-    System.out.println("Actual URL: " + actual);
-    System.out.println("Expected URL Part: " + expected);
+	        // 3. Assertion with custom message
+	        Assert.assertTrue(actual.contains(expected),
+	                "Assertion failed: Current URL does not contain the expected value.");
 
-    // 3. Assert it contains the expected value
-    Assert.assertTrue(actual.contains(expected),"Current URL does not contain the expected value.");
-    
-  
-}
+	    } catch (TimeoutException e) {
+	        System.out.println("Timeout occurred while waiting for the URL to load.");
+	        throw new AssertionError("Test failed: URL did not load within 15 seconds.", e);
+	    } catch (Exception e) {
+	        System.out.println("An unexpected error occurred: " + e.getMessage());
+	        throw e;
+	    }
+	}
+
 	public void toverifygiventextisPlaintext(String string) throws InterruptedException {
 
 

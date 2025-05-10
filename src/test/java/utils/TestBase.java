@@ -1,9 +1,10 @@
-package utils;
+	package utils;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
+import java.util.UUID;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -42,10 +43,13 @@ public class TestBase {
 				ChromeOptions options = new ChromeOptions();
 				options.addArguments("--disable-notifications");
 				options.addArguments("--disable-gpu");
+				options.addArguments("--headless");
 				options.addArguments("--disable-extensions");
 				options.addArguments("--no-sandbox");
 				options.addArguments("--disable-dev-shm-usage");
 				options.addArguments("--remote-allow-origins=*");
+				
+				options.addArguments("--user-data-dir=/tmp/chrome-profile-" + UUID.randomUUID().toString());
 
 				DesiredCapabilities capabilities = new DesiredCapabilities();
 				capabilities.setCapability(ChromeOptions.CAPABILITY, options);
