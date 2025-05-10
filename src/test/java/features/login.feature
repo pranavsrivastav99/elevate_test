@@ -1,7 +1,7 @@
 Feature: Login Functionality
 
 
- 
+ @test 
   Scenario: Verify UI elements on the login page
     Given I am on the DL6 Technologies login page
     Then I should see the "DL6 Technologies" header
@@ -15,7 +15,7 @@ Feature: Login Functionality
     And I should see a "Do not have an account yet?" link
     And I should see an "eye icon" in the password field
     
- 
+ @test 
   Scenario: Verify eye icon functionality in the password field
     Given I am on the DL6 Technologies login page
     And I enter a password "Password123"
@@ -23,7 +23,7 @@ Feature: Login Functionality
     Then the password should be visible as plain text
     When I click on the "eye icon" again
     Then the password should be masked as dots or asterisks
-    
+ @test 
   Scenario: Successful login with valid credentials
     Given I am on the DL6 Technologies login page
     When I enter a valid email "pranav0203@yopmail.com"
@@ -31,7 +31,7 @@ Feature: Login Functionality
     And I click on the "Sign In" button
     Then I should be redirected to the dashboard
     
- 
+ @test
   Scenario: Login with invalid credentials
     Given I am on the DL6 Technologies login page
     When I enter an invalid email "invalid@example.com"
@@ -40,7 +40,7 @@ Feature: Login Functionality
     Then I should see an error message "Invalid email or password"
     
     
-@test   
+  
  Scenario: Remember Me functionality retains login session after browser restart
     Given I am on the DL6 Technologies login page
     When I enter a valid email "pranav0203@yopmail.com"
