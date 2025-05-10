@@ -44,27 +44,27 @@ public class Genericutils {
 
 
 	public void compareToUrl(String expected) {
-	    try {
-	        // 1. Wait for the page to load and URL to change to something meaningful
-	        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-	        wait.until(driver -> !driver.getCurrentUrl().isEmpty());  // Wait until some URL is loaded
+		 try {
+		        // 1. Wait until expected URL part appears in current URL
+		        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+		        wait.until(ExpectedConditions.urlContains(expected));
 
-	        // 2. Get actual URL
-	        String actual = driver.getCurrentUrl();
-	        System.out.println("Actual URL: " + actual);
-	        System.out.println("Expected URL Part: " + expected);
+		        // 2. Get actual URL
+		        String actual = driver.getCurrentUrl();
+		        System.out.println("Actual URL: " + actual);
+		        System.out.println("Expected URL Part: " + expected);
 
-	        // 3. Assertion with custom message
-	        Assert.assertTrue(actual.contains(expected),
-	                "Assertion failed: Current URL does not contain the expected value.");
+		        // 3. Assertion with custom message
+		        Assert.assertTrue(actual.contains(expected),
+		                "Assertion failed: Current URL does not contain the expected value.");
 
-	    } catch (TimeoutException e) {
-	        System.out.println("Timeout occurred while waiting for the URL to load.");
-	        throw new AssertionError("Test failed: URL did not load within 15 seconds.", e);
-	    } catch (Exception e) {
-	        System.out.println("An unexpected error occurred: " + e.getMessage());
-	        throw e;
-	    }
+		    } catch (TimeoutException e) {
+		        System.out.println("Timeout occurred while waiting for the URL to contain expected value.");
+		        throw new AssertionError("Test failed: URL did not update to expected value within 15 seconds.", e);
+		    } catch (Exception e) {
+		        System.out.println("An unexpected error occurred: " + e.getMessage());
+		        throw e;
+		    }
 	}
 
 	public void toverifygiventextisPlaintext(String string) throws InterruptedException {
